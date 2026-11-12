@@ -1,0 +1,237 @@
+/*
+ * Glass — frosted, translucent surfaces inspired by macOS.
+ *
+ */
+
+.light-theme {
+  /* UI colors (macOS system colors, light) */
+  --background: #f5f5f7;
+  --base-gray: #a0a0a2;
+  --base-blue: #007aff;
+  --base-green: #34c759;
+  --base-yellow: #ffcc00;
+  --base-orange: #ff9500;
+  --base-red: #ff3b30;
+  --base-purple: #af52de;
+  --base-pink: #ff2d55;
+  --base-accent: #007aff;
+
+  /* Glass */
+  --glass-wallpaper:
+    radial-gradient(at 0% 0%, #c7d7fe 0, transparent 55%),
+    radial-gradient(at 100% 0%, #fbd3e9 0, transparent 50%),
+    radial-gradient(at 100% 100%, #c9ecfb 0, transparent 55%),
+    radial-gradient(at 0% 100%, #fde2c8 0, transparent 50%),
+    #eceef6;
+  --glass-chrome: rgb(255 255 255 / 0.5);
+  --glass-panel: rgb(250 250 252 / 0.72);
+  --glass-edge: rgb(255 255 255 / 0.7);
+  --glass-hairline: rgb(0 0 0 / 0.1);
+  --glass-shadow: 0 0 0 0.5px rgb(0 0 0 / 0.12), 0 8px 28px rgb(0 0 0 / 0.16);
+
+  /* Editor colors (inspired by Xcode, light) */
+  --xc-bg: #ffffff;
+  --xc-fg: #262626;
+  --xc-line: #ecf5ff;
+  --xc-selection: #b3d7ff;
+  --xc-gutter: #98989d;
+  --xc-comment: #5d6c79;
+  --xc-keyword: #9b2393;
+  --xc-string: #c41a16;
+  --xc-number: #1c00cf;
+  --xc-function: #6c36a9;
+  --xc-type: #3900a0;
+  --xc-declaration: #0f68a0;
+  --xc-attribute: #815f03;
+  --xc-preprocessor: #643820;
+  --xc-url: #0e0eff;
+}
+
+.dark-theme {
+  /* UI colors (macOS system colors, dark) */
+  --background: #1c1c1e;
+  --base-gray: #323143;
+  --base-blue: #0a84ff;
+  --base-green: #30d158;
+  --base-yellow: #ffd60a;
+  --base-orange: #ff9f0a;
+  --base-red: #ff453a;
+  --base-purple: #bf5af2;
+  --base-pink: #ff375f;
+  --base-accent: #0a84ff;
+
+  /* Glass */
+  --glass-wallpaper:
+    radial-gradient(at 0% 0%, #2b3270 0, transparent 55%),
+    radial-gradient(at 100% 0%, #4b2160 0, transparent 50%),
+    radial-gradient(at 100% 100%, #0f4161 0, transparent 55%),
+    radial-gradient(at 0% 100%, #3b1f4f 0, transparent 50%),
+    #15151c;
+  --glass-chrome: rgb(30 30 36 / 0.55);
+  --glass-panel: rgb(40 40 46 / 0.72);
+  --glass-edge: rgb(255 255 255 / 0.1);
+  --glass-hairline: rgb(255 255 255 / 0.08);
+  --glass-shadow: 0 0 0 0.5px rgb(0 0 0 / 0.5), 0 8px 28px rgb(0 0 0 / 0.45);
+
+  /* Editor colors (inspired by Xcode, dark) */
+  --xc-bg: #1f1f24;
+  --xc-fg: #dfdfe0;
+  --xc-line: #23252b;
+  --xc-selection: #3f638b;
+  --xc-gutter: #747478;
+  --xc-comment: #7f8c98;
+  --xc-keyword: #fc5fa3;
+  --xc-string: #fc6a5d;
+  --xc-number: #d0bf69;
+  --xc-function: #a167e6;
+  --xc-type: #d0a8ff;
+  --xc-declaration: #41a1c0;
+  --xc-attribute: #bf8555;
+  --xc-preprocessor: #fd8f3f;
+  --xc-url: #5482ff;
+}
+
+.light-theme,
+.dark-theme {
+  /* ===== App ===== */
+
+  --focus-ring: 3px solid rgb(from var(--primary-9) r g b / 0.45);
+
+  /* ===== Button ===== */
+
+  --btn-border-radius: 999px;
+  --btn-small-border-radius: 999px;
+  --btn-primary-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+
+  /* ===== Input ===== */
+
+  --input-border-radius: 7px;
+  --input-border-focus: 1px solid var(--primary-9);
+
+  /* ===== Checkbox ===== */
+
+  --checkbox-border-radius: 4px;
+
+  /* ===== Link ===== */
+
+  --link-fg: var(--primary-text);
+
+  /* ===== Selection ===== */
+
+  --selection-bg: var(--xc-selection);
+  --selection-fg: var(--xc-fg);
+
+  /* ===== Titlebar ===== */
+
+  --titlebar-bg: var(--glass-chrome);
+  --titlebar-inactive-bg: var(--glass-chrome);
+
+  /* ===== Sidebar ===== */
+
+  --sidebar-bg: var(--glass-chrome);
+  --sidebar-rail-bg: transparent;
+
+  /* ===== Panel ===== */
+  /* Panels stay opaque: sticky headers and cards inside them use the same
+     color. Menus and notifications float, so they get the frosted glass. */
+
+  --panel-shadow: var(--glass-shadow);
+  --panel-border-radius: 12px;
+
+  /* --menu-bg: var(--glass-panel); */
+  --menu-border: 1px solid var(--glass-edge);
+  --menu-border-radius: 10px;
+
+  --connection-form-card-bg: var(--glass-panel);
+
+  /* ===== Notification ===== */
+
+  --notif-bg: var(--glass-panel);
+
+  /* ===== Statusbar ===== */
+
+  --statusbar-bg: var(--glass-chrome);
+
+  /* ===== Tabs ===== */
+
+  --tabs-header-bg: var(--glass-chrome);
+  --tab-bg: transparent;
+  --tab-active-bg: var(--xc-bg);
+
+  /* ===== Alert ===== */
+
+  --alert-border-radius: 10px;
+
+  /* ===== Editor ===== */
+
+  /* Editor chrome */
+  --editor-bg: var(--xc-bg);
+  --editor-fg: var(--xc-fg);
+  --editor-cursor-bg: var(--xc-fg);
+  --editor-selected-bg: var(--xc-selection);
+  --editor-activeline-bg: var(--xc-line);
+  --editor-activeline-gutter-bg: var(--xc-line);
+  --editor-gutter-bg: var(--xc-bg);
+  --editor-linenumber-fg: var(--xc-gutter);
+  --editor-linenumber-active-fg: var(--xc-fg);
+  --editor-foldgutter-fg: var(--xc-gutter);
+  --editor-foldgutter-fg-hover: var(--xc-fg);
+
+  /* Matches and markers */
+  --editor-guttermarker-subtle-fg: var(--xc-gutter);
+  --editor-matchingselection-bg: rgb(from var(--xc-selection) r g b / 0.5);
+  --editor-searchmatch-bg: var(--yellow-a5);
+  --editor-searchmatch-selected-bg: var(--yellow-a8);
+  --editor-matchingbracket-fg: var(--xc-fg);
+  --editor-matchingbracket-bg: rgb(from var(--xc-selection) r g b / 0.6);
+
+  /* ===== Color Syntax ===== */
+
+  --syntax-keyword: var(--xc-keyword);
+  --syntax-string: var(--xc-string);
+  --syntax-constant: var(--xc-number);
+  --syntax-variable: var(--xc-fg);
+  --syntax-function: var(--xc-function);
+  --syntax-type: var(--xc-type);
+  --syntax-decorator: var(--xc-attribute);
+  --syntax-link: var(--xc-url);
+  --syntax-diff: var(--xc-string);
+  --syntax-comment: var(--xc-comment);
+  --syntax-punctuation: var(--xc-fg);
+
+  --editor-bool-fg: var(--xc-keyword);
+  --editor-null-fg: var(--xc-keyword);
+  --editor-definition-fg: var(--xc-declaration);
+  --editor-processingInstruction-fg: var(--xc-preprocessor);
+  --editor-macro-fg: var(--xc-preprocessor);
+  --editor-heading-fg: var(--xc-keyword);
+  --editor-strikethrough-fg: var(--xc-comment);
+
+  /* ===== Mongo Shell ===== */
+
+  --mongo-shell-mongo-prompt-fg: var(--primary-text);
+  --mongo-shell-ansi-output-fg: var(--xc-fg);
+}
+
+/* ===== Wallpaper ===== */
+
+.beekeeper-studio-wrapper,
+.theme-preview {
+  background: var(--glass-wallpaper);
+}
+
+/* ===== Frosted glass ===== */
+
+.BksContextMenu-list,
+.tabulator-menu {
+  --menu-bg: var(--glass-panel);
+  backdrop-filter: blur(8px) saturate(180%);
+}
+
+.core-tabs .nav-tabs .tab-action {
+  background: transparent;
+}
+
+.interface .global-items:not(.workspace-items) {
+  background: var(--sidebar-bg);
+}

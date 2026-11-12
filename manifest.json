@@ -1,0 +1,10 @@
+{
+  "id": "glass",
+  "name": "Glass",
+  "author": {
+    "name": "Beekeeper Studio",
+    "url": "https://www.beekeeperstudio.io"
+  },
+  "description": "Frosted, translucent surfaces inspired by macOS.",
+  "version": "1.0.0"
+}
